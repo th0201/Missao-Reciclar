@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Missão Reciclar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         TELA INICIAL
+    ========================== -->
+
+    <section id="telaInicial" class="tela-inicial">
+
+        <!-- Imagem da tela inicial -->
+        <img 
+            src="imagens/telainicial.png" 
+            class="imagem-inicial" 
+            alt="Tela inicial do Missão Reciclar"
+        >
+
+        <!-- Botão JOGAR -->
+        <button class="botao-jogar" onclick="iniciarJogo()">
+
+            <span class="folha folha1">🍃</span>
+            <span class="folha folha2">🌿</span>
+            <span class="folha folha3">🍃</span>
+            <span class="folha folha4">🌿</span>
+
+            <span class="madeira">
+                JOGAR
+            </span>
+
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         TELA DO MAPA
+    ========================== -->
+
+    <section id="telaMapa" class="tela-mapa">
+
+        <!-- Imagem do mapa -->
+        <img 
+            src="imagens/mapa.png" 
+            class="imagem-mapa" 
+            alt="Mapa da EcoVille"
+        >
+
+
+        <!-- =========================
+             FASE MAR
+        ========================== -->
+
+        <div class="fase mar">
+
+            <div class="nome-fase">
+                MAR
+            </div>
+
+            <button 
+                class="botao-personagem"
+                onclick="abrirMissao('mar')"
+            >
+
+                <img 
+                    src="imagens/tico.png" 
+                    alt="Tico"
+                >
+
+                <span>Tico</span>
+
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             FASE CIDADE
+        ========================== -->
+
+        <div class="fase cidade">
+
+            <div class="nome-fase">
+                CIDADE
+            </div>
+
+            <button 
+                class="botao-personagem"
+                onclick="abrirMissao('cidade')"
+            >
+
+                <img 
+                    src="imagens/lila.png" 
+                    alt="Lila"
+                >
+
+                <span>Lila</span>
+
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             FASE FLORESTA
+        ========================== -->
+
+        <div class="fase floresta">
+
+            <div class="nome-fase">
+                FLORESTA
+            </div>
+
+            <button 
+                class="botao-personagem"
+                onclick="abrirMissao('floresta')"
+            >
+
+                <img 
+                    src="imagens/beto.png" 
+                    alt="Beto"
+                >
+
+                <span>Beto</span>
+
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             FASE RIO
+        ========================== -->
+
+        <div class="fase rio">
+
+            <div class="nome-fase">
+                RIO
+            </div>
+
+            <button 
+                class="botao-personagem"
+                onclick="abrirMissao('rio')"
+            >
+
+                <img 
+                    src="imagens/nina.png" 
+                    alt="Nina"
+                >
+
+                <span>Nina</span>
+
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             FASE JARDIM
+        ========================== -->
+
+        <div class="fase jardim">
+
+            <div class="nome-fase">
+                JARDIM
+            </div>
+
+            <button 
+                class="botao-personagem"
+                onclick="abrirMissao('jardim')"
+            >
+
+                <img 
+                    src="imagens/mel.png" 
+                    alt="Mel"
+                >
+
+                <span>Mel</span>
+
+            </button>
+
+        </div>
+
+
+        <!-- Botão voltar -->
+
+        <button 
+            class="botao-voltar"
+            onclick="voltarInicio()"
+        >
+            ← VOLTAR
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         PAINEL DA MISSÃO
+    ========================== -->
+
+    <div id="painelMissao" class="painel-missao">
+
+        <div class="caixa-missao">
+
+            <button 
+                class="fechar"
+                onclick="fecharMissao()"
+            >
+                ×
+            </button>
+
+            <img 
+                id="imagemPersonagem"
+                src=""
+                alt="Personagem"
+            >
+
+            <h2 id="tituloMissao">
+                Missão
+            </h2>
+
+            <p id="textoMissao">
+                Prepare-se para a missão!
+            </p>
+
+            <button> 
+                class="botao-comecar"
+                onclick="comecarMissao()"
+            >
+                COMEÇAR MISSÃO
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,538 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #000;
+}
+
+
+/* =========================================
+   TELA INICIAL
+========================================= */
+
+.tela-inicial {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #000;
+}
+
+
+/* Imagem da tela inicial */
+
+.imagem-inicial {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+
+    object-fit: cover;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   BOTÃO JOGAR
+========================================= */
+
+.botao-jogar {
+    position: absolute;
+
+    left: 50%;
+    bottom: 12%;
+
+    transform: translateX(-50%);
+
+    width: 230px;
+    height: 100px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: transform 0.2s ease;
+}
+
+
+/* Madeira do botão */
+
+.madeira {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 150px;
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #b8793e 0%,
+            #8b542d 65%,
+            #62381f 100%
+        );
+
+    border: 5px solid #4c2d19;
+
+    box-shadow:
+        inset 0 3px 4px rgba(255,255,255,0.18),
+        inset 0 -5px 8px rgba(0,0,0,0.35),
+        0 7px 10px rgba(0,0,0,0.45);
+
+    color: white;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        2px 2px 2px #3d2414;
+}
+
+
+/* Folhas */
+
+.folha {
+    position: absolute;
+
+    font-size: 42px;
+
+    filter:
+        drop-shadow(2px 3px 2px rgba(0,0,0,0.35));
+
+    z-index: 3;
+}
+
+
+/* Folhas individuais */
+
+.folha1 {
+    left: 5px;
+    top: 5px;
+
+    transform: rotate(-35deg);
+}
+
+.folha2 {
+    right: 5px;
+    top: 2px;
+
+    transform: rotate(35deg);
+}
+
+.folha3 {
+    left: 8px;
+    bottom: 4px;
+
+    transform: rotate(-60deg);
+}
+
+.folha4 {
+    right: 8px;
+    bottom: 4px;
+
+    transform: rotate(60deg);
+}
+
+
+/* Efeito ao passar o mouse */
+
+.botao-jogar:hover {
+    transform: translateX(-50%) scale(1.08);
+}
+
+
+/* =========================================
+   TELA DO MAPA
+========================================= */
+
+.tela-mapa {
+
+    display: none;
+
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #000;
+}
+
+
+/* =========================================
+   IMAGEM DO MAPA
+========================================= */
+
+.imagem-mapa {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+
+    object-fit: cover;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   FASES
+========================================= */
+
+.fase {
+
+    position: absolute;
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* Nome das regiões */
+
+.nome-fase {
+
+    padding: 8px 15px;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.678);
+
+    color: rgb(16, 102, 16);
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    
+}
+
+
+/* =========================================
+   BOTÕES DOS PERSONAGENS
+========================================= */
+
+.botao-personagem {
+
+    width: 95px;
+    height: 95px;
+
+    border-radius: 50%;
+
+    border: 4px solid white;
+
+    background: #4eb9c7bd;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.5);
+
+    transition: transform 0.2s;
+}
+
+
+.botao-personagem:hover {
+
+    transform: scale(1.12);
+
+}
+
+
+.botao-personagem img {
+
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+}
+
+
+.botao-personagem span {
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-shadow: 1px 1px 2px #000;
+}
+
+
+/* =========================================
+   POSIÇÃO DAS FASES
+========================================= */
+
+.mar {
+
+    left: 15%;
+    top: 20%;
+}
+
+
+.cidade {
+
+    left: 48%;
+    top: 15%;
+}
+
+
+.floresta {
+
+    left: 75%;
+    top: 18%;
+}
+
+
+.rio {
+
+    left: 25%;
+    top: 65%;
+}
+
+
+.jardim {
+
+    left: 70%;
+    top: 70%;
+}
+
+
+/* =========================================
+   BOTÃO VOLTAR
+========================================= */
+
+.botao-voltar {
+
+    position: absolute;
+
+    left: 25px;
+    bottom: 25px;
+
+    z-index: 10;
+
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: rgba(170, 247, 208, 0.678);
+
+    color: rgb(18, 102, 30);
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.botao-voltar:hover {
+
+    background: white;
+
+}
+
+
+/* =========================================
+   PAINEL DA MISSÃO
+========================================= */
+
+.painel-missao {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 50;
+
+    background: rgba(0,0,0,0.65);
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Caixa */
+
+.caixa-missao {
+
+    position: relative;
+
+    width: 500px;
+
+    max-width: 90%;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background: #fff;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.5);
+}
+
+
+/* Personagem grande */
+
+.caixa-missao img {
+
+    width: 180px;
+    height: 180px;
+
+    object-fit: contain;
+}
+
+
+/* Título */
+
+.caixa-missao h2 {
+
+    margin-top: 10px;
+
+    font-size: 30px;
+
+    color: #285b32;
+}
+
+
+/* Texto */
+
+.caixa-missao p {
+
+    margin-top: 15px;
+
+    font-size: 18px;
+
+    line-height: 1.5;
+
+    color: #333;
+}
+
+
+/* Fechar */
+
+.fechar {
+
+    position: absolute;
+
+    right: 15px;
+    top: 10px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #d9534f;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   BOTÃO COMEÇAR MISSÃO
+========================================= */
+
+.botao-comecar {
+
+    margin-top: 25px;
+
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #3b873e;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.botao-comecar:hover {
+
+    background: #2e6d31;
+
+}
