@@ -25,6 +25,30 @@
             alt="Tela inicial do Missão Reciclar"
         >
 
+        <!-- =========================
+     PERFIL DO JOGADOR
+========================= -->
+
+<div class="perfil-jogador">
+
+    <div class="avatar-jogador">
+        👦
+    </div>
+
+    <span>JOGADOR</span>
+
+</div>
+
+
+<!-- =========================
+     BOTÃO CONFIGURAÇÕES
+========================= -->
+
+<button class="botao-configuracoes" onclick="abrirConfiguracoes()">
+    ⚙️
+</button>
+
+
         <!-- Botão JOGAR -->
         <button class="botao-jogar" onclick="iniciarJogo()">
 
@@ -32,6 +56,10 @@
             <span class="folha folha2">🌿</span>
             <span class="folha folha3">🍃</span>
             <span class="folha folha4">🌿</span>
+
+            <span class="circulo-play">
+                <span class="play">▶</span>
+            </span>
 
             <span class="madeira">
                 JOGAR
@@ -232,7 +260,7 @@
                 Prepare-se para a missão!
             </p>
 
-            <button> 
+            <button
                 class="botao-comecar"
                 onclick="comecarMissao()"
             >
